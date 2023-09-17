@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notes app</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <h1 class="center-page">Notes App</h1>
+  <div>
+    <p class="center-text">Create and track your awesome ideas and notes </p>
+  </div>
+
+  <div class="search-bar center-page">
+    <div class="debBor center-text search-para">
+      <div class="search-text-wrapper search-wrapper">
+        <span class="verticle-center-text" style="margin-right:30px"> Search here or start new</span>
+      </div>
+
+      <div class="input search-wrapper">
+        <span style="position: relative;right:-400px;" class="material-symbols-outlined inline-icon">search</span>
+        <input type="text" style="margin-left: 400px;" />
+      </div>
+
+      <!-- add plus icon at the end  -->
+      <div class="add search-wrapper">
+        <span id="add-note-button" style="position: relative;right: 0;" class="material-symbols-outlined inline-icon"
+          onclick="openModel()">
+          add</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="model" class="model">
+    <p>
+      <span id="model-cancel" class="material-symbols-outlined" onclick="closeModel()">
+        cancel
+      </span>
+    </p>
+    <h1 class="model-content">
+      Add new notes here
+    </h1>
+    <div class="notes-para">
+      <div class="title margin-10">
+        <div class="content-wrapper"><label for="note-title">Title</label></div>
+        <div class="content-wrapper"><input id="note-title" name="title" placeholder="Add the title" />
+        </div>
+      </div>
+
+      <div class="content margin-10">
+        <div class="content-wrapper"><label for="note-content">Content</label></div>
+        <div class="content-wrapper"><textarea id="note-content" name="content" rows="4"
+            placeholder="Add the notes"></textarea>
+        </div>
+      </div>
+      <!-- <input type="text" id="note-content" name="content" placeholder="Add the notes"> -->
+      <div class="model-buttons">
+        <button class="button-center" id="reset-note">reset</button>
+        <button class="button-center" id="save-note">save</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="saved-notes">
+    <h2 style="margin: 10px;" class="center-page center-text">Your notes </h2>
+    <div id="no-notes" class="no-display center-page center-text">
+      <p>No notes are found please click on add button to save</p>
+    </div>
+    <div id="notes-wrapper">
+      <div class="note-saved center-page debBor width-90">
+        <h3 class="margin-5">my first note</h3>
+        <p class="margin-5">data saved in the my first note</p>
+        <button id="close-note" class="note-saved-button">Mark and close</button>
+        <button id="edit-note" class="note-saved-button">Edit</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
